@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking System</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        #login, #search { margin-bottom: 20px; }
+        #flights { margin-top: 20px; }
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid black; padding: 10px; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div id="login">
+        <h2>Login</h2>
+        <input type="text" id="username" placeholder="rohi1995">
+        <input type="password" id="password" placeholder="rohi1997">
+        <button onclick="login()">Login</button>
+        <div id="loginMessage"></div>
+    </div>
+
+    <div id="search" style="display: none;">
+        <h2>Flight Search</h2>
+        <input type="text" id="from" placeholder="From">
+        <input type="text" id="to" placeholder="To">
+        <input type="date" id="departDate">
+        <input type="number" id="travellers" placeholder="Number of Travellers">
+        <select id="class">
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+        </select>
+        <button onclick="searchFlights()">Search Flights</button>
+        <button onclick="resetSearch()">Reset</button>
+    </div>
+
+    <div id="flights" style="display: none;">
+        <h2>Available Flights</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Flight Name</th>
+                    <th>Time</th>
+                    <th>Fare</th>
+                </tr>
+            </thead>
+            <tbody id="flightsList"></tbody>
+        </table>
+    </div>
+
+    <script src="klh.js"></script>
+</body>
+</html>
